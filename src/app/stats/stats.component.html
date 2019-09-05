@@ -1,0 +1,11 @@
+<h3>General Stats</h3>
+<kendo-grid [data]="view" [sortable]="true" [sort]="sort" (sortChange)="onSortChange($event)">
+    <kendo-grid-column field="id" title="#"></kendo-grid-column>
+    <kendo-grid-column field="team.name" title="Team"></kendo-grid-column>
+    <kendo-grid-column [sortable]="false" field="games" title="Games"></kendo-grid-column>
+    <kendo-grid-column field="wins" title="Wins"></kendo-grid-column>
+    <kendo-grid-column field="draws" title="Draws"></kendo-grid-column>
+    <kendo-grid-column field="losts" title="Losts"></kendo-grid-column>
+    <kendo-grid-column field="diff" title="Diff"></kendo-grid-column>
+    <kendo-grid-column field="score" title="Score"></kendo-grid-column>
+</kendo-grid>

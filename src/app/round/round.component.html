@@ -1,0 +1,7 @@
+<form  novalidate id="see-round">
+
+	<label for="round">Go to round</label>
+  <kendo-dropdownlist name="round" [(ngModel)]="round" (ngModelChange)="onRoundChanged($event)"  [data]="rounds"></kendo-dropdownlist>
+    
+</form>
+<router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+<h3>Round {{ round }}</h3>
+<kendo-grid 
+  id="round-matches" 
+  [data]="view | async" 
+  (cellClick)="cellClickHandler($event)" 
+>
+	<kendo-grid-column field="local" title="Local"></kendo-grid-column>
+	<kendo-grid-column field="localScore" min="0" editor="numeric" title="Score"></kendo-grid-column>
+	<kendo-grid-column field="visitorScore" editor="numeric" title="Score"></kendo-grid-column>
+	<kendo-grid-column field="visitor" title="Visitor"></kendo-grid-column>
+</kendo-grid>
