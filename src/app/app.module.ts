@@ -7,23 +7,29 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { DataService } from './data.service';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { StatsComponent } from './stats/stats.component';
+import { StatsModule } from './stats/stats.module';
+import { TodoModule } from './todo/todo.module';
+import { TodoComponent } from './todo/todo.component';
 
 const appRoutes: Routes = [{
-  path: 'stats', loadChildren: () => import('./stats/stats.module').then(module => module.StatsModule)
+  path: 'stats', component: StatsComponent
 }, {
   path: 'rounds', loadChildren: () => import('./round/round.module').then(module => module.RoundModule)
 }, {
-  path: 'todos', loadChildren:() => import('./todo/todo.module').then(module => module.TodoModule)
+  path: 'todos', component: TodoComponent
 }, {
   path: '', redirectTo: 'todos', pathMatch: 'full'
 }]
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    StatsModule,
+    TodoModule,
     HttpClientModule,
     BrowserAnimationsModule,
     InMemoryWebApiModule.forRoot(DataService),

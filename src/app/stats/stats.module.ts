@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StatsComponent } from './stats.component';
-import { StatsRoutingModule } from './stats-routing.module';
 import { GridModule } from '@progress/kendo-angular-grid';
 
 
@@ -9,10 +8,12 @@ import { GridModule } from '@progress/kendo-angular-grid';
 @NgModule({
   imports: [
     CommonModule,
-    StatsRoutingModule,
     GridModule
   ],
   declarations: [
+    StatsComponent
+  ],
+  exports: [
     StatsComponent
   ]
 })
